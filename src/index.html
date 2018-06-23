@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Guliwe | Publications</title>
+  <base href="./">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+  <link rel="icon" type="image/x-icon" href="assets/img/book.png">
+    <!--
+    ####################################################
+    C S S - bootstrap, custom styles
+    ####################################################
+    -->
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+      <!-- FontAwesome Icons -->
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      <!-- Lato Display Font from Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i" rel="stylesheet">
+  
+      <!-- Custom styles for this template -->
+      <link href="assets/css/homepage.css" rel="stylesheet">
+</head>
+<body>
+  <app-root></app-root>
+    <!--
+    ####################################################
+    J A V A S C R I P T - jquery, bootstrap, plugins
+    Placed at the end of the document so the pages load faster
+    ####################################################
+    -->
+
+   <!-- jQuery - Grab from a CDN and if not available grab a local copy -->
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+   <script>
+     window.jQuery || document.write('<script src="assets/js/vendor/jquery-3.2.1.min.js"><\/script>')
+   </script>
+
+
+   <!-- Bootstrap core JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+
+
+   <!-- Custom Javascript -->
+   <script src="assets/js/homepage.js"></script>
+
+   <!-- Defer scripts that are not critical to the initial page load. -->
+   <script type="text/javascript">
+     function downloadJSAtOnload() {
+     var element = document.createElement("script");
+     // Your scripts would go inside this defer.js
+     // Use case would be "enhancements" like animations, share buttons, etc.
+     element.src = "assets/js/defer.js";
+     document.body.appendChild(element);
+     }
+     if (window.addEventListener)
+     window.addEventListener("load", downloadJSAtOnload, false);
+     else if (window.attachEvent)
+     window.attachEvent("onload", downloadJSAtOnload);
+     else window.onload = downloadJSAtOnload;
+   </script>
+
+   <!-- Google Analytics code goes here if needed -->
+</body>
+</html>
