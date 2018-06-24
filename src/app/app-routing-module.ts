@@ -16,6 +16,7 @@ import { UserRegistrationComponent } from './account/user-registration/user-regi
 import { UserLogoutComponent } from './account/user-logout/user-logout.component';
 import { UserNavComponent } from './dash-board/user-dashboard/user-nav/user-nav.component';
 import { ViewArticleComponent } from './article/view-article/view-article.component';
+import { UnAuthorizedComponent } from './account/un-authorized/un-authorized.component';
 
 //Create routes here with components
 const routes: Routes =[
@@ -48,7 +49,8 @@ export const routingComponents = [
     PayFastComponent,
     CheckoutComponent,
     CartComponent,
-    DirectDepositComponent
+    DirectDepositComponent,
+    UnAuthorizedComponent
 ];
 
 //Compile into on Ngmodule

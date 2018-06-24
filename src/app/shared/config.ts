@@ -1,5 +1,14 @@
-export const   API_URL='http://localhost:8080/guliwe/api';  //Local
-// export const   API_URL='http://ndu-systems.net/guliwe/api'; //Deployed
+export const IS_LOCAL = true;
+let api ="http://ndu-systems.net/guliwe/api"
+let web ="http://ndu-systems.net"
+if(IS_LOCAL){
+    api='http://localhost:8080/guliwe/api';
+    web='http://localhost:4200';
+    
+}
+
+export const   API_URL= api;
+// export const   API_URL=''; //Deployed
 export const EMAIL= "http://ndu-systems.net/guliwe/api/email.php";
 
 //Currency Converter constants
