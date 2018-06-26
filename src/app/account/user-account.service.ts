@@ -23,4 +23,8 @@ export class UserAccountService {
    return this.httpClient.post(`${this.API_PATH}/Account/signup.php`,model);
    }
 
+   updateUser(data): Observable<any>{
+     return  this.httpClient.post(`${this.API_PATH}/Account/updateuser.php`,data);
+   }
+
 }

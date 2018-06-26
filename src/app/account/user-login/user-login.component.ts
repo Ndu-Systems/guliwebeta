@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class UserLoginComponent implements OnInit {
 
-  Email: any
-  Password: any
+  Email: any = 'user@mail.com'
+  Password: any = 'pass'
   message: any
   isValid: Boolean
   constructor(

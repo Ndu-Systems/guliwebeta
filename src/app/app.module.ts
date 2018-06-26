@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { SelectService } from './shared/select.service';
 import { UserAccountService } from './account/user-account.service';
 import { ViewArticleService } from './article/view-article/view-article.service';
+import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
  
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ViewArticleService } from './article/view-article/view-article.service'
   providers: [
     SelectService,
     UserAccountService,
-    ViewArticleService
+    ViewArticleService,
+    ShoppingCartService
   ],
   bootstrap: [AppComponent]
 })

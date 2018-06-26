@@ -1,3 +1,7 @@
+import { MyProfileComponent } from './dash-board/user-dashboard/my-profile/my-profile.component';
+import { AdminProfileComponent } from './dash-board/admin-dashboard/admin-profile/admin-profile.component';
+import { UserProfileComponent } from './account/user-profile/user-profile.component';
+import { ChangePasswordComponent } from './account/change-password/change-password.component';
 import { DirectDepositComponent } from './payments/direct-deposit/direct-deposit.component';
 import { CartComponent } from './shopping-cart/cart/cart.component';
 import { CheckoutComponent } from './shopping-cart/checkout/checkout.component';
@@ -29,6 +33,9 @@ const routes: Routes =[
     {path: "user-dashboard", component: UserDashboardComponent}, 
     { path: "direct-deposit-success", component:DirectDepositComponent},
     { path: "view-article/:ArticleId", component: ViewArticleComponent},
+    { path: "un-authorized", component: UnAuthorizedComponent },
+    {path: "publisher-profile", component: AdminProfileComponent},
+    {path: "my-profile", component: MyProfileComponent },
     {path:"**", component:HomeComponent }
 ];
 
@@ -50,7 +57,11 @@ export const routingComponents = [
     CheckoutComponent,
     CartComponent,
     DirectDepositComponent,
-    UnAuthorizedComponent
+    UnAuthorizedComponent,
+    ChangePasswordComponent,
+    UserProfileComponent,
+    AdminProfileComponent ,
+    MyProfileComponent
 ];
 
 //Compile into on Ngmodule
