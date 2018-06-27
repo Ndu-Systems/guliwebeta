@@ -1,3 +1,5 @@
+import { ForgotPasswordEmailComponent } from './account/forgot-password/forgot-password-email/forgot-password-email.component';
+import { ForgotPasswordComponent } from './account/forgot-password/forgot-password.component';
 import { AdminChangePasswordComponent } from './dash-board/admin-dashboard/admin-change-password/admin-change-password.component';
 import { MyProfileComponent } from './dash-board/user-dashboard/my-profile/my-profile.component';
 import { AdminProfileComponent } from './dash-board/admin-dashboard/admin-profile/admin-profile.component';
@@ -40,6 +42,8 @@ const routes: Routes =[
     { path: "publisher-change-password", component: AdminChangePasswordComponent},
     { path: "user-change-password", component: UserChangePasswordComponent},
     {path: "my-profile", component: MyProfileComponent },
+    {path: "forgot-password", component: ForgotPasswordEmailComponent},
+    {path: "reset-password", component: ForgotPasswordComponent},
     {path:"**", component:HomeComponent }
 ];
 
@@ -67,7 +71,9 @@ export const routingComponents = [
     AdminProfileComponent ,
     MyProfileComponent,
     AdminChangePasswordComponent,
-    UserChangePasswordComponent
+    UserChangePasswordComponent,
+    ForgotPasswordComponent,
+    ForgotPasswordEmailComponent
 ];
 
 //Compile into on Ngmodule

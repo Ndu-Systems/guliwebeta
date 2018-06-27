@@ -8,9 +8,9 @@ if(IS_LOCAL){
 }
 
 export const   API_URL= api;
-// export const   API_URL=''; //Deployed
+export const  WEB_HOST = web;
 export const EMAIL= "http://ndu-systems.net/guliwe/api/email.php";
-
+ 
 //Currency Converter constants
 export const CONVERT_URL = "http://www.apilayer.net/api/live?";
 export const ACCESS_Key = "4c8b5d5408a4d04921fe07bb2d491815";

@@ -10,6 +10,8 @@ import { SelectService } from './shared/select.service';
 import { UserAccountService } from './account/user-account.service';
 import { ViewArticleService } from './article/view-article/view-article.service';
 import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
+import { ForgotPasswordService } from './account/forgot-password/forgot-password.service';
+import { EmailService } from './shared/email.service';
  
 
 @NgModule({
@@ -28,7 +30,9 @@ import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
     SelectService,
     UserAccountService,
     ViewArticleService,
-    ShoppingCartService
+    ShoppingCartService,
+    ForgotPasswordService,
+    EmailService
   ],
   bootstrap: [AppComponent]
 })
