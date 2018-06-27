@@ -1,3 +1,4 @@
+import { AdminChangePasswordComponent } from './dash-board/admin-dashboard/admin-change-password/admin-change-password.component';
 import { MyProfileComponent } from './dash-board/user-dashboard/my-profile/my-profile.component';
 import { AdminProfileComponent } from './dash-board/admin-dashboard/admin-profile/admin-profile.component';
 import { UserProfileComponent } from './account/user-profile/user-profile.component';
@@ -21,6 +22,7 @@ import { UserLogoutComponent } from './account/user-logout/user-logout.component
 import { UserNavComponent } from './dash-board/user-dashboard/user-nav/user-nav.component';
 import { ViewArticleComponent } from './article/view-article/view-article.component';
 import { UnAuthorizedComponent } from './account/un-authorized/un-authorized.component';
+import { UserChangePasswordComponent } from './dash-board/user-dashboard/user-change-password/user-change-password.component';
 
 //Create routes here with components
 const routes: Routes =[
@@ -35,6 +37,8 @@ const routes: Routes =[
     { path: "view-article/:ArticleId", component: ViewArticleComponent},
     { path: "un-authorized", component: UnAuthorizedComponent },
     {path: "publisher-profile", component: AdminProfileComponent},
+    { path: "publisher-change-password", component: AdminChangePasswordComponent},
+    { path: "user-change-password", component: UserChangePasswordComponent},
     {path: "my-profile", component: MyProfileComponent },
     {path:"**", component:HomeComponent }
 ];
@@ -61,7 +65,9 @@ export const routingComponents = [
     ChangePasswordComponent,
     UserProfileComponent,
     AdminProfileComponent ,
-    MyProfileComponent
+    MyProfileComponent,
+    AdminChangePasswordComponent,
+    UserChangePasswordComponent
 ];
 
 //Compile into on Ngmodule

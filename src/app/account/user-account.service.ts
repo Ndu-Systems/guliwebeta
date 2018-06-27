@@ -14,7 +14,7 @@ export class UserAccountService {
 
     constructor(private httpClient:HttpClient) { }
 
-    public loginUser(Email:string,Password:string): Observable<any>{
+    public loginUser(Email:String,Password:String): Observable<any>{
       return this.httpClient.get<any>(`${this.API_PATH}/Account/SignIn.php?Email=${Email}&Password=${Password}`);
    }
 

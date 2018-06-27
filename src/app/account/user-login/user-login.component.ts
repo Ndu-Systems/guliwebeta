@@ -35,8 +35,8 @@ export class UserLoginComponent implements OnInit {
     if(this.isValid){
       this.userAccountService.loginUser(this.Email,this.Password)
       .subscribe((response)=>{
-        if(response){
-            let user = response.data[0];
+        let user = response.data[0];
+        if(user.Email!== undefined){           
             this.userDataService.saveUser(user);
             if(user.Role == "Admin"){
               this.router.navigate(["admin-dashboard"]);
