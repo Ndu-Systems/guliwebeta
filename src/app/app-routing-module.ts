@@ -27,24 +27,25 @@ import { UnAuthorizedComponent } from './account/un-authorized/un-authorized.com
 import { UserChangePasswordComponent } from './dash-board/user-dashboard/user-change-password/user-change-password.component';
 
 //Create routes here with components
-const routes: Routes =[
-    {path: "", component: HomeComponent},
-    {path: "top-paid", component: TopPaidArticlesComponent},   
-    {path: "login", component: UserLoginComponent},
-    {path: "logout", component: UserLogoutComponent},
-    {path: "register", component: UserRegistrationComponent}, 
-    {path: "admin-dashboard", component: AdminDashboardComponent}, 
-    {path: "user-dashboard", component: UserDashboardComponent}, 
-    { path: "direct-deposit-success", component:DirectDepositComponent},
-    { path: "view-article/:ArticleId", component: ViewArticleComponent},
+const routes: Routes = [
+    { path: "", component: HomeComponent },
+    { path: "top-paid", component: TopPaidArticlesComponent },
+    { path: "login", component: UserLoginComponent },
+    { path: "logout", component: UserLogoutComponent },
+    { path: "register", component: UserRegistrationComponent },
+    { path: "admin-dashboard", component: AdminDashboardComponent },
+    { path: "user-dashboard", component: UserDashboardComponent },
+    { path: "direct-deposit-success", component: DirectDepositComponent },
+    { path: "view-article/:ArticleId", component: ViewArticleComponent },
     { path: "un-authorized", component: UnAuthorizedComponent },
-    {path: "publisher-profile", component: AdminProfileComponent},
-    { path: "publisher-change-password", component: AdminChangePasswordComponent},
-    { path: "user-change-password", component: UserChangePasswordComponent},
-    {path: "my-profile", component: MyProfileComponent },
-    {path: "forgot-password", component: ForgotPasswordEmailComponent},
-    {path: "reset-password", component: ForgotPasswordComponent},
-    {path:"**", component:HomeComponent }
+    { path: "publisher-profile", component: AdminProfileComponent },
+    { path: "publisher-change-password", component: AdminChangePasswordComponent },
+    { path: "user-change-password", component: UserChangePasswordComponent },
+    { path: "my-profile", component: MyProfileComponent },
+    { path: "forgot-password", component: ForgotPasswordEmailComponent },
+    { path: "reset-password", component: ForgotPasswordComponent },
+    { path: "checkout", component: CheckoutComponent },
+    { path: "**", component: HomeComponent }
 ];
 
 //Add Components here to export
@@ -68,7 +69,7 @@ export const routingComponents = [
     UnAuthorizedComponent,
     ChangePasswordComponent,
     UserProfileComponent,
-    AdminProfileComponent ,
+    AdminProfileComponent,
     MyProfileComponent,
     AdminChangePasswordComponent,
     UserChangePasswordComponent,
@@ -78,8 +79,8 @@ export const routingComponents = [
 
 //Compile into on Ngmodule
 @NgModule({
-    imports: [RouterModule.forRoot(routes,{useHash:true})],
-    exports:[RouterModule]
+    imports: [RouterModule.forRoot(routes, { useHash: true })],
+    exports: [RouterModule]
 })
 
 //Reference below in the app.module.ts
