@@ -1,3 +1,4 @@
+import { UserDataService } from './../../shared/user-data.service';
 import { ViewArticleService } from './view-article.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -20,13 +21,23 @@ export class ViewArticleComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private viewArticleService: ViewArticleService,
-    private shoppingCartService: ShoppingCartService
+    private shoppingCartService: ShoppingCartService,
+    private userDataService : UserDataService
   ) { }
 
   ngOnInit() {
-    debugger
+    this.GetUser();
     this.ArticleId = parseInt(this.route.snapshot.paramMap.get("ArticleId"));
     this.ViewArticle(this.ArticleId);
+  }
+  GetUser(): any {
+    this.user = this.userDataService.getUser();
+    if(this.user){
+      console.log("user logged in");
+    }
+    else{
+      console.log("insecure connection");
+    }
   }
   ViewArticle(ArticleId) {
     debugger

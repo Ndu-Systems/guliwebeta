@@ -1,3 +1,4 @@
+import { UserDataService } from './../../shared/user-data.service';
 import { EmailService } from './../../shared/email.service';
 import { ShoppingCartService } from './../shopping-cart.service';
 import { ArticleService } from './../../article/article.service';
@@ -25,11 +26,12 @@ export class CheckoutComponent implements OnInit {
     private articleService : ArticleService,
     private shoppingCartService : ShoppingCartService, 
     private emailService : EmailService,
-    private router : Router 
+    private router : Router ,
+    private userDataService : UserDataService
   ) { }
 
   ngOnInit() { 
-   
+   this.GetUser();
     this.cart = this.shoppingCartService.get();
     this.cartSubscription = this.cart.subscribe((cart) => {
       this.itemCount = cart.items.map((x) => x.quantity).reduce((p, n) => p + n, 0);
@@ -47,6 +49,15 @@ export class CheckoutComponent implements OnInit {
           });
       });
     });
+  }
+  GetUser(): any {
+    this.user = this.userDataService.getUser();
+    if(this.user){
+      console.log("user logged in");
+    }
+    else{
+     this.router.navigate(['un-authorized']);
+    }
   }
   public ngOnDestroy(): void {
     if (this.cartSubscription) {

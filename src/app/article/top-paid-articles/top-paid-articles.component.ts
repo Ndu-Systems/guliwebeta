@@ -1,6 +1,8 @@
+import { UserDataService } from './../../shared/user-data.service';
 import { Component, OnInit } from '@angular/core';
 import { SelectService } from '../../shared/select.service';
 import { Router } from '@angular/router';
+import { User } from '../../models/User';
 
 @Component({
   selector: 'app-top-paid-articles',
@@ -8,18 +10,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./top-paid-articles.component.css']
 })
 export class TopPaidArticlesComponent implements OnInit {
+ 
 
-  articles: any[];
+  articles: any[]= [];
+  user : User;
   constructor(
     private selectService: SelectService,
-    private router : Router
+    private router : Router, 
+    private userDataService: UserDataService
   ) { }
 
-  ngOnInit() {
-    this.articles = [];
-    this.getAllArticles();
+  ngOnInit() { 
+    this.GetUser();
+    this.getAllArticles();  
   }
-
+  GetUser(): any {
+    this.user = this.userDataService.getUser();
+    if(this.user){
+      console.log("user logged in");
+    }
+    else{
+      console.log("insecure connection");
+    }
+  }
   getAllArticles() {
     this.selectService.select("article order by ArticleId desc").subscribe(response => {
       if (response) {

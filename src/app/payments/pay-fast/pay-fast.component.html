@@ -1,3 +1,14 @@
-<p>
-  pay-fast works!
-</p>
+<form ngNoForm  action="https://sandbox.payfast.co.za/eng/process" method="post" >
+  <input name="merchant_id" type="hidden" value="10008951">
+  <input name="merchant_key" type="hidden" value="ah52oarwzt0lm">
+  <input name="return_url" type="hidden" value="http://ndu-systems.net/guliwe/#!/">
+  <input name="name_first" type="hidden" value="{{firstName}}">
+  <input name="name_last" type="hidden" value="{{lastName}}">
+  <input name="email_address" type="hidden" value="{{emailAddress}}">
+  <input name="m_payment_id" type="hidden" value="2">
+  <input name="amount" type="hidden" value={{amount}}>
+  <input name="item_name" type="hidden" value="Guliwe Article Purchase(s)">
+  <input name="item_description" type="hidden" value="Downloadable Purchases">
+  <input name="payment_method" type="hidden" value="cc">
+  <!-- <input name="signature" type="hidden" value="f384f275047f906687ee2114f6e8570b"> -->
+  <button type="submit" value=""><img src="https://www.payfast.co.za/images/buttons/dark-large-paynow.png" width="174" height="59" alt="Pay" title="Pay Now with PayFast" /></button></form>
