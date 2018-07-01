@@ -1,4 +1,4 @@
-import { SelectService } from './../shared/select.service';
+import { ArticleService } from './../article/article.service'; 
 import { Injectable } from '@angular/core';
 import { ShoppingCart } from '../models/Shopping-Cart';
 import { Observable, Observer } from 'rxjs';
@@ -18,10 +18,10 @@ export class ShoppingCartService {
 
     public constructor(
       private storageService : StorageService,
-      private articleService : SelectService
+      private articleService : ArticleService
     ) { 
       this.storage = this.storageService.get();
-      this.articleService.select("article order by ArticleId desc").subscribe((articles)=> this.articles = articles.data);
+      this.articleService.getAllArticles().subscribe((articles)=> this.articles = articles.data);
       this.subscriptionObservable = new Observable<ShoppingCart>((observer: Observer<ShoppingCart>)=> {
         this.subscribers.push(observer);
         observer.next(this.retrieve());
@@ -39,7 +39,10 @@ export class ShoppingCartService {
     //Add Item to shopping cart
     public addItem(article: Article, quantity: number): void{
       const cart = this.retrieve();
-      let item = cart.items.find((p)=> p.ArticleId === article.ArticleId);
+      let item = undefined;
+      if(cart.items.length !== 0){
+        item  = cart.items.find((p)=> p.ArticleId === article.ArticleId);
+      } 
       
       if(item === undefined){
         item = new CartItem();

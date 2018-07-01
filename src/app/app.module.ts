@@ -1,3 +1,4 @@
+import { ArticleService } from './article/article.service';
 import { HomeComponent } from './home/home.component';
 import { HomeNavComponent } from './home/home-nav/home-nav.component';
 import { AppRoutingModule, routingComponents } from './app-routing-module';
@@ -12,6 +13,7 @@ import { ViewArticleService } from './article/view-article/view-article.service'
 import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
 import { ForgotPasswordService } from './account/forgot-password/forgot-password.service';
 import { EmailService } from './shared/email.service';
+import { LocalStorageService, StorageService } from './shared/storage.service';
  
 
 @NgModule({
@@ -29,10 +31,17 @@ import { EmailService } from './shared/email.service';
   providers: [
     SelectService,
     UserAccountService,
+    LocalStorageService,
     ViewArticleService,
-    ShoppingCartService,
+    {provide: StorageService, useClass: LocalStorageService},
+    {
+      deps: [StorageService, ArticleService],
+      provide: ShoppingCartService,
+      useClass: ShoppingCartService
+    },
     ForgotPasswordService,
-    EmailService
+    ArticleService,
+    EmailService,
   ],
   bootstrap: [AppComponent]
 })

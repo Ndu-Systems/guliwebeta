@@ -1,3 +1,4 @@
+import { ArticleService } from './../../article/article.service';
 import { SelectService } from './../../shared/select.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
@@ -11,7 +12,7 @@ import { ShoppingCartService } from '../shopping-cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  public articles : Observable<Article[]>;
+  public articles: Observable<Article[]>;
   public cart: Observable<ShoppingCart>;
   public itemCount: number;
 
@@ -19,10 +20,27 @@ export class CartComponent implements OnInit {
 
   constructor(
     private shoppingCartService: ShoppingCartService,
-    private selectService: SelectService
+    private articleService: ArticleService
   ) { }
 
   ngOnInit() {
+    this.articles = this.articleService.getAllArticles();
+    this.cart = this.shoppingCartService.get();
+    this.cartSubscription = this.cart.subscribe((cart)=>{
+      this.itemCount = cart.items.map((x)=> x.quantity).reduce((p,n) => p + n ,0);
+    });
   }
+
+  public ngOnDestroy(): void {
+    if (this.cartSubscription) {
+      this.cartSubscription.unsubscribe();
+    }
+  }
+
+  emptyCart() {
+    this.shoppingCartService.empty(); 
+  }
+
+  
 
 }
