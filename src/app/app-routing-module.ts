@@ -25,7 +25,7 @@ import { UserNavComponent } from './dash-board/user-dashboard/user-nav/user-nav.
 import { ViewArticleComponent } from './article/view-article/view-article.component';
 import { UnAuthorizedComponent } from './account/un-authorized/un-authorized.component';
 import { UserChangePasswordComponent } from './dash-board/user-dashboard/user-change-password/user-change-password.component';
-
+ 
 //Create routes here with components
 const routes: Routes = [
     { path: "", component: HomeComponent },
@@ -44,7 +44,7 @@ const routes: Routes = [
     { path: "my-profile", component: MyProfileComponent },
     { path: "forgot-password", component: ForgotPasswordEmailComponent },
     { path: "reset-password", component: ForgotPasswordComponent },
-    { path: "checkout", component: CheckoutComponent },
+    { path: "checkout", component: CheckoutComponent }, 
     { path: "**", component: HomeComponent }
 ];
 
@@ -74,7 +74,7 @@ export const routingComponents = [
     AdminChangePasswordComponent,
     UserChangePasswordComponent,
     ForgotPasswordComponent,
-    ForgotPasswordEmailComponent
+    ForgotPasswordEmailComponent 
 ];
 
 //Compile into on Ngmodule

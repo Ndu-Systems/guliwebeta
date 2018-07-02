@@ -98,8 +98,8 @@ export class CheckoutComponent implements OnInit {
 
     this.emailService.sendEmail(email).subscribe((data) => {
       if (data === 1) {
-        alert("Email Sent");
-        this.router.navigate(['Direct-Deposit-Success']);
+        // alert("");
+        this.router.navigate(['direct-deposit-success']);
       }
       else {
         alert(data);
