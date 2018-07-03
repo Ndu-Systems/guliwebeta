@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div *ngIf="(!user);else other_content">
+    <app-home-nav></app-home-nav>
+  </div>
+  <ng-template #other_content>
+      <app-user-nav></app-user-nav>
+  </ng-template> 
+    <div class="product-easy">
+      <div class="container"> 
+      <div class="alert alert-dismissible alert-success">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <h4 class="alert-heading">Success!</h4>
+      <div *ngIf="(user)">
+          <p class="mb-0">Email has been sent to {{emailAddress}} with the bank details </p>
+        <p class="mb-0">Kindly note that a deposit and proof of payment is required for fulfilment of Order, Meanwhile <a routerLink="/top-paid" class="alert-link">Continue Shopping</a> <i class="fa fa-shopping-cart"></i>.</p>
+      </div>    
+    </div>
+    </div>
+  </div>

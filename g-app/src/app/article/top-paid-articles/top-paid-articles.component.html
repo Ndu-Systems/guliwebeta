@@ -1,0 +1,39 @@
+<div *ngIf= "(!user); else other_content"> 
+  <app-home-nav></app-home-nav>
+</div>
+<ng-template #other_content>
+  <app-user-nav></app-user-nav>
+</ng-template>
+<section class="jumbotron">
+  <div class="img" style="background-image:url(assets/img/carousel-600x400-2.jpg)"></div>
+  <div class="container">     
+    <h4 class="jumb-text">Top Paid</h4>    
+  </div>
+</section>
+<hr/>
+<div class="album py-5 bg-light" *ngIf="(articles) as listOfArticles">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"  *ngFor="let item of listOfArticles" >
+          <div class="card mb-4 box-shadow">
+              <div class="card-header" >
+                  Featured - Articles
+                </div>
+            <img class="card-img-top card-image" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]"  src="{{item.ImageUrl}}" data-holder-rendered="true">
+            <div class="card-body">
+              <p class="card-text">{{item.Title}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary btn-outline" (click)="SelectedArticle(item)">Read More...</button> 
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <div class="container"  *ngIf="(!articles)">
+      <h1>No Articles Available Yet Coming Soon...</h1>
+    </div>
+  </div>
