@@ -14,18 +14,20 @@ import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
 import { ForgotPasswordService } from './account/forgot-password/forgot-password.service';
 import { EmailService } from './shared/email.service';
 import { LocalStorageService, StorageService } from './shared/storage.service';
+import { UserPipePipe } from './shared/pipes/user-pipe.pipe';
  
 
 @NgModule({
   declarations: [
     AppComponent,
+    UserPipePipe,
     routingComponents
  
 ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule,    
     HttpClientModule
   ],
   providers: [
