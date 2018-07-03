@@ -1,3 +1,4 @@
+import { AddArticleComponent } from './article/add-article/add-article.component';
 import { GetUsersComponent } from './users/get-users/get-users.component';
 import { ForgotPasswordEmailComponent } from './account/forgot-password/forgot-password-email/forgot-password-email.component';
 import { ForgotPasswordComponent } from './account/forgot-password/forgot-password.component';
@@ -39,6 +40,7 @@ const routes: Routes = [
     { path: "user-dashboard", component: UserDashboardComponent },
     { path: "direct-deposit-success", component: DirectDepositComponent },
     { path: "view-article/:ArticleId", component: ViewArticleComponent },
+    { path: "add-article", component: AddArticleComponent },
     { path: "un-authorized", component: UnAuthorizedComponent },
     { path: "publisher-profile", component: AdminProfileComponent },
     { path: "publisher-change-password", component: AdminChangePasswordComponent },
@@ -78,7 +80,8 @@ export const routingComponents = [
     UserChangePasswordComponent,
     ForgotPasswordComponent,
     ForgotPasswordEmailComponent,
-    ViewUsersComponent
+    ViewUsersComponent,
+    AddArticleComponent
 ];
 
 //Compile into on Ngmodule

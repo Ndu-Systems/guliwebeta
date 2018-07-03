@@ -1,0 +1,68 @@
+<app-admin-nav></app-admin-nav>
+
+
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <!-- form card login -->
+          <div class="alert alert-warning" role="alert" *ngIf="(message)">
+            {{message}}
+          </div>
+          <div class="card rounded-0">
+            <div class="card-header">
+              <h3 class="mb-0">Add article</h3>
+            </div>
+            <div class="card-body">
+              <div class="form" >
+                <div class="form-group">
+                  <label for="uname1">Title</label>
+                  <input type="text" [(ngModel)]="Title" [ngModelOptions]="{standalone: true}" class="form-control form-control-lg rounded-0"
+                    name="uname1" id="" required="">
+
+                </div>
+                <div class="form-group">
+                  <label>ISSN</label>
+                  <input type="text" [(ngModel)]="ISSN" [ngModelOptions]="{standalone: true}" class="form-control form-control-lg rounded-0"
+                    id="pwd1" required="" autocomplete="new-password">
+                </div>
+                <div class="form-group">
+                  <label>Price</label>
+                  <input type="text" [(ngModel)]="Price" [ngModelOptions]="{standalone: true}" class="form-control form-control-lg rounded-0"
+                    id="pwd1" required="">
+                </div>
+                <hr/>
+                <div class="form-group">
+                  <label for="exampleTextarea">Abstract</label>
+                  <textarea class="form-control" [(ngModel)]="abstract"  rows="3"></textarea>
+
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputFile">Upload Cover</label>
+                  <input type="file" class="form-control-file" id="exampleInputFile" (change)="filesChangedCover($event.target.files)">
+                  <small id="fileHelp" class="form-text text-muted"></small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputFile">Upload Article File (PDF)</label>
+                  <input type="file" class="form-control-file" id="exampleInputFile" (change)="filesChangedFile($event.target.files)">
+                  <small id="fileHelp" class="form-text text-muted"></small>
+                </div>
+                <button (click)="uplaodFiles()" class="btn btn-primary">Submit</button>
+
+              </div>
+            </div>
+            <!--/card-block-->
+          </div>
+          <!-- /form card login -->
+
+        </div>
+      </div>
+      <!--/row-->
+    </div>
+    <!--/col-->
+  </div>
+  <!--/row-->
+</div>
+<!--/container-->

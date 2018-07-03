@@ -16,4 +16,18 @@ export class ArticleService {
         `${this.API_PATH}/Article/GetAticles.php?`
       );
   }
+
+  addArticle(model): Observable<any>{
+    return this.HttpClient.post(`${this.API_PATH}/Article/AddArticle.php`,model);
+  }
+
+ 
+  uploadFile(file:File):Observable<any>{
+    let formData  = new FormData();
+    formData.append('file', file);
+    formData.append('name', file.name)
+     return this.HttpClient.post<any>(`${this.API_PATH}/Article/upload.php`,
+      formData
+    );
+}
 }
