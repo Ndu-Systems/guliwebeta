@@ -10,7 +10,8 @@ $target_dir = "uploads/";
 //get extention 
  $extentionArray =explode(".", basename($_FILES["file"]["name"]));
  $extention= $extentionArray[count($extentionArray)-1];
- echo $target_file = $target_dir .time().'.'.$extention;
+  $target_file = $target_dir .time().'.'.$extention;
+  echo json_encode( $target_file);
 move_uploaded_file($_FILES["file"]["tmp_name"], $target_file);
 }
 

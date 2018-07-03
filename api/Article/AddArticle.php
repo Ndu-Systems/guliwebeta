@@ -11,7 +11,7 @@ if (isset($data->Price) ){
 	$Title              = $data->Title;
 	$PublisherID        = $data->PublisherID;
 	$ImageUrl           = $data->ImageUrl;
-	$Abstract           = $data->Abstract;
+	$Abstract           = $data->abstract;
 	$FileUrl            = $data->FileUrl;
  
  // check if user exits
