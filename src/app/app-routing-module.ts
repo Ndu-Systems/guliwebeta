@@ -1,3 +1,4 @@
+import { GetUsersComponent } from './users/get-users/get-users.component';
 import { ForgotPasswordEmailComponent } from './account/forgot-password/forgot-password-email/forgot-password-email.component';
 import { ForgotPasswordComponent } from './account/forgot-password/forgot-password.component';
 import { AdminChangePasswordComponent } from './dash-board/admin-dashboard/admin-change-password/admin-change-password.component';
@@ -25,6 +26,7 @@ import { UserNavComponent } from './dash-board/user-dashboard/user-nav/user-nav.
 import { ViewArticleComponent } from './article/view-article/view-article.component';
 import { UnAuthorizedComponent } from './account/un-authorized/un-authorized.component';
 import { UserChangePasswordComponent } from './dash-board/user-dashboard/user-change-password/user-change-password.component';
+import { ViewUsersComponent } from './dash-board/admin-dashboard/view-users/view-users.component';
  
 //Create routes here with components
 const routes: Routes = [
@@ -45,6 +47,7 @@ const routes: Routes = [
     { path: "forgot-password", component: ForgotPasswordEmailComponent },
     { path: "reset-password", component: ForgotPasswordComponent },
     { path: "checkout", component: CheckoutComponent }, 
+    { path: "view-subscribers", component: ViewUsersComponent},
     { path: "**", component: HomeComponent }
 ];
 
@@ -74,7 +77,8 @@ export const routingComponents = [
     AdminChangePasswordComponent,
     UserChangePasswordComponent,
     ForgotPasswordComponent,
-    ForgotPasswordEmailComponent 
+    ForgotPasswordEmailComponent,
+    ViewUsersComponent
 ];
 
 //Compile into on Ngmodule
