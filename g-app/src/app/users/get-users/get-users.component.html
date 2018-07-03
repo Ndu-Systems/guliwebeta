@@ -1,3 +1,33 @@
-<p>
-  get-users works!
-</p>
+<div class="container pt-4">
+    <div class="row">
+      <div class="input-group col-md-4 offset-4">
+        <input class="form-control py-2 border-right-0 border" type="search" value="" [(ngModel)]="search" placeholder="search subscriber" id="example-search-input">
+        <span class="input-group-append">
+          <button class="btn btn-outline-secondary border-left-0 border" type="button">
+            <i class="fa fa-search"></i>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="container pt-5" *ngIf="users$ | async as users">
+      <table class="table">
+        <caption>Website Subscribers</caption>
+        <thead>
+          <tr>
+            <th scope="col">FirstName</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Email</th>
+            <th scope="col">Downloads</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users | userpipe:search">
+            <td>{{user.FirstName}}</td>
+            <td>{{user.Surname}}</td>
+            <td>{{user.Email}}</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

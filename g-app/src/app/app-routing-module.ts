@@ -81,7 +81,8 @@ export const routingComponents = [
     ForgotPasswordComponent,
     ForgotPasswordEmailComponent,
     ViewUsersComponent,
-    AddArticleComponent
+    AddArticleComponent,
+    GetUsersComponent
 ];
 
 //Compile into on Ngmodule
