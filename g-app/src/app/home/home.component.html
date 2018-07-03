@@ -1,0 +1,84 @@
+<app-home-nav></app-home-nav>
+<div id="carousel" class="carousel slide carousel-fade container-fluid" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="row">     
+    <div class="carousel-inner" role="listbox">            
+         <div class="carousel-item active"> 
+            <a routerLink="">                    
+                 <picture>
+                  <source srcset="assets/img/carousel-2000x400-2.jpg" media="(min-width: 1400px)">
+                  <source srcset="assets/img/carousel-1400x400-2.jpg" media="(min-width: 768px)">
+                   <source srcset="assets/img/carousel-800x400-2.jpg" media="(min-width: 576px)">
+                  <img srcset="assets/img/carousel-600x400-2.jpg" alt="responsive image" class="d-block img-fluid">
+                </picture>
+
+                <div class="carousel-caption justify-content-center align-items-center">
+                    <div>
+                        <br/>
+                        <h2>A New Chapter A Click Away</h2>
+                        <p>Get your story <b>Online</b></p>
+                        <span class="btn btn-sm btn-outline-primary">Our Process</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="carousel-item">
+                <a routerLink="">                    
+                     <picture>
+                      <source srcset="assets/img/carousel-2000x400-1.jpg" media="(min-width: 1400px)">
+                      <source srcset="assets/img/carousel-1400x400-1.jpg" media="(min-width: 768px)">
+                       <source srcset="assets/img/carousel-800x400-1.jpg" media="(min-width: 576px)">
+                      <img srcset="assets/img/carousel-600x400-1.jpg" alt="responsive image" class="d-block img-fluid">
+                    </picture>
+    
+                    <div class="carousel-caption justify-content-center align-items-center">
+                        <div>
+                            <br/>
+                            <h2>A New Chapter A Click Away</h2>
+                            <p>Get your story <b>Online</b></p>
+                            <span class="btn btn-sm btn-outline-primary">Our Process</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        <div class="carousel-item">
+            <a routerLink="">                    
+                 <picture>
+                  <source srcset="assets/img/carousel-2000x400-3.jpg" media="(min-width: 1400px)">
+                  <source srcset="assets/img/carousel-1400x400-3.jpg" media="(min-width: 768px)">
+                   <source srcset="assets/img/carousel-800x400-3.jpg" media="(min-width: 576px)">
+                  <img srcset="assets/img/carousel-600x400-3.jpg" alt="responsive image" class="d-block img-fluid">
+                </picture>
+                <div class="carousel-caption justify-content-center align-items-center">
+                    <div class="colorText">
+                        <br/>
+                        <h2>A New Chapter A Click Away</h2>
+                        <p>Get your story <b>Online</b></p>
+                        <span class="btn btn-sm btn-outline-primary">Our Process</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+      
+          
+        <!-- /.carousel-item -->
+    </div>
+</div>
+    <!-- /.carousel-inner -->
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- /.carousel -->
+<div>
+    <app-get-articles></app-get-articles>
+</div>

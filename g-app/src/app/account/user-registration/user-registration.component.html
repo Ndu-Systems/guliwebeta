@@ -1,0 +1,55 @@
+<app-home-nav></app-home-nav> 
+<div class="container py-5">
+  <div class="row">  
+    <div class="col-md-12">
+           <div class="row">
+              <div class="col-md-6 mx-auto">
+                  <!-- form card login -->
+                  <div class="alert alert-warning" role="alert" *ngIf="(message)">
+                    {{message}}
+                  </div>
+                  <div class="card rounded-0">
+                      <div class="card-header">
+                          <h3 class="mb-0">Register - Form</h3>
+                      </div>
+                      <div class="card-body">
+                          <form class="form" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                              <div class="form-group">
+                                  <label for="uname1">Email</label>
+                                  <input type="text"  [(ngModel)]="Email" [ngModelOptions]="{standalone: true}"  class="form-control form-control-lg rounded-0" name="uname1" id="" required="">
+ 
+                              </div>
+                              <div class="form-group">
+                                  <label>Password</label>
+                                  <input type="password"  [(ngModel)]="Password" [ngModelOptions]="{standalone: true}"  class="form-control form-control-lg rounded-0" id="pwd1" required="" autocomplete="new-password">
+                              </div>   
+                              <div class="form-group">
+                                <label>Confirm Password</label>
+                                <input type="password"   [(ngModel)]="ConfirmPassword" [ngModelOptions]="{standalone: true}" class="form-control form-control-lg rounded-0" id="pwd1" required="" autocomplete="new-password">
+                              </div>  
+                              <hr/>
+                              <div class="form-group">
+                                <label for="uname1">First Name</label>
+                                <input type="text"  [(ngModel)]="FirstName" [ngModelOptions]="{standalone: true}"  class="form-control form-control-lg rounded-0" name="uname1" id="" required="">
+                            </div>
+                            <div class="form-group">
+                              <label for="uname1">Surname</label>
+                              <input type="text"  [(ngModel)]="Surname" [ngModelOptions]="{standalone: true}"  class="form-control form-control-lg rounded-0" name="uname1" id="" required="">
+                            </div>
+                                <button type="submit" (click)="Register()" class="btn btn-primary btn-lg float-left" id="btnRegister">Register</button>                                             
+                            
+                          </form>
+                      </div>
+                      <!--/card-block-->
+                  </div>
+                  <!-- /form card login -->
+
+              </div>
+          </div>
+          <!--/row-->
+      </div>
+      <!--/col-->
+  </div>
+  <!--/row-->
+</div>
+<!--/container-->

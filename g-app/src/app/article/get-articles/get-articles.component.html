@@ -1,0 +1,27 @@
+<hr/>
+<div class="album py-5 bg-light" *ngIf="(articles) as listOfArticles">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"  *ngFor="let item of listOfArticles" >
+          <div class="card mb-4 box-shadow">
+              <div class="card-header" >
+                  Featured - Articles
+                </div>
+            <img class="card-img-top card-image" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]"  src="{{item.ImageUrl}}" data-holder-rendered="true">
+            <div class="card-body">
+              <p class="card-text">{{item.Title}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary btn-outline">Read More...</button> 
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <div class="container"  *ngIf="(!articles)">
+      <h1>No Articles Available Yet Coming Soon...</h1>
+    </div>
+  </div>

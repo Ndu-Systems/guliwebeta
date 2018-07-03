@@ -1,0 +1,132 @@
+/*
+BootstrapCreative
+Created by: Jacob Lett
+Licensed MIT 
+2017
+
+1 rem    = 16px
+.75 rem  = 12px
+.5 rem   = 8px
+.25 rem  = 4px
+
+Bootstrap 4 breakpoints
+@media (min-width: 544px) { }
+@media (min-width: 768px) { }
+@media (min-width: 992px) { }
+@media (min-width: 1200px) { }
+
+Colors
+#0275d8 - primary blue
+#636c72 - light gray
+#292b2c - black
+*/
+
+/*
+####################################################
+G R I D  &  T Y P E
+####################################################
+*/
+
+
+
+
+/*
+####################################################
+U T I L I T I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Background utilties
+*/
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Image Border
+Applies a light gray border based on class
+all, top, right, bottom, left
+*/
+
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Overlay Background Color
+Helps darken or lighten image that has text on top
+*/
+
+
+
+
+/*
+####################################################
+Contact Form 
+####################################################
+*/
+.contact-form{
+    margin: 6em 0;
+    position: relative;  
+   }
+   .contact-form h1{
+    padding:2em 1px;
+    color: #F97300; 
+   }
+   .contact-form .right{
+    max-width: 600px;
+   }
+   .contact-form .right .btn-secondary{
+    background:  #F97300;
+    color: #fff;
+    border:0;
+   }
+   .contact-form .right .form-control::placeholder{
+    color: #888;
+    font-size: 16px;
+   }
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Navbar
+*/
+.nav-text{
+    color:#E58035;
+}
+
+
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Carousel
+*/
+
+
+
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Card navigation with right angle character
+http://stackoverflow.com/questions/13233991/combine-after-with-hover
+*/
+
+
+
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Quote
+Change background image tall (800 x 800) to wide (1500 x 800) 
+dimensions are increased slightly to account for retina displays
+*/
+
+
