@@ -28,6 +28,8 @@ import { ViewArticleComponent } from './article/view-article/view-article.compon
 import { UnAuthorizedComponent } from './account/un-authorized/un-authorized.component';
 import { UserChangePasswordComponent } from './dash-board/user-dashboard/user-change-password/user-change-password.component';
 import { ViewUsersComponent } from './dash-board/admin-dashboard/view-users/view-users.component';
+import { ListArticlesComponent } from './article/list-articles/list-articles.component';
+import { ViewArticlesComponent } from './dash-board/admin-dashboard/view-articles/view-articles.component';
  
 //Create routes here with components
 const routes: Routes = [
@@ -50,6 +52,7 @@ const routes: Routes = [
     { path: "reset-password", component: ForgotPasswordComponent },
     { path: "checkout", component: CheckoutComponent }, 
     { path: "view-subscribers", component: ViewUsersComponent},
+    { path: "view-articles", component: ViewArticlesComponent},
     { path: "**", component: HomeComponent }
 ];
 
@@ -82,7 +85,9 @@ export const routingComponents = [
     ForgotPasswordEmailComponent,
     ViewUsersComponent,
     AddArticleComponent,
-    GetUsersComponent
+    GetUsersComponent,
+    ListArticlesComponent,
+    ViewArticlesComponent
 ];
 
 //Compile into on Ngmodule

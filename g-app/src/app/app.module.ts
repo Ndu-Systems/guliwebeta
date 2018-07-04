@@ -15,14 +15,15 @@ import { ForgotPasswordService } from './account/forgot-password/forgot-password
 import { EmailService } from './shared/email.service';
 import { LocalStorageService, StorageService } from './shared/storage.service';
 import { UserPipePipe } from './shared/pipes/user-pipe.pipe';
+import { ArticlePipePipe } from './shared/pipes/article-pipe.pipe';
  
 
 @NgModule({
   declarations: [
     AppComponent,
     UserPipePipe,
-    routingComponents
- 
+    ArticlePipePipe,
+    routingComponents 
 ],
   imports: [
     BrowserModule,
