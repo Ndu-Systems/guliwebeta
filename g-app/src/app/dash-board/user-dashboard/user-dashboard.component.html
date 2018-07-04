@@ -1,4 +1,41 @@
 <app-user-nav></app-user-nav>
-<p>
-  user-dashboard works!
-</p>
+<div class="container pt-5">
+    <div class="card-deck">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="fa fa-user fa-lg" style="color: indigo"></i> My Account</h5>
+          <p class="card-text">View Your Account Here</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a routerLink="/my-profile" class="btn btn-primary pt-2" style="color: white">Go</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="fa fa-download fa-lg" style="color: indigo"></i> My Purchased Articles</h5>
+          <p class="card-text">View Your Published Articles here</p>         
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a routerLink="/user-dashboard" class="btn btn-secondary pt-2" style="color: white">Go</a>
+              </li>
+            </ul>       
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="fa fa-comments fa-lg" style="color: indigo"></i> My Reviews</h5>
+          <p class="card-text">View Your Views And Comments here</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a routerLink="/user-dashboard" class="btn btn-secondary pt-2" style="color: white">Go</a>
+            </li>
+          </ul>
+        </div>
+      </div>    
+    </div>
+  </div>
