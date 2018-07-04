@@ -30,6 +30,7 @@ import { UserChangePasswordComponent } from './dash-board/user-dashboard/user-ch
 import { ViewUsersComponent } from './dash-board/admin-dashboard/view-users/view-users.component';
 import { ListArticlesComponent } from './article/list-articles/list-articles.component';
 import { ViewArticlesComponent } from './dash-board/admin-dashboard/view-articles/view-articles.component';
+import { TopSellingArticlesComponent } from './article/top-selling-articles/top-selling-articles.component';
  
 //Create routes here with components
 const routes: Routes = [
@@ -87,7 +88,8 @@ export const routingComponents = [
     AddArticleComponent,
     GetUsersComponent,
     ListArticlesComponent,
-    ViewArticlesComponent
+    ViewArticlesComponent,
+    TopSellingArticlesComponent
 ];
 
 //Compile into on Ngmodule

@@ -17,6 +17,12 @@ export class ArticleService {
       );
   }
 
+  getTopSellingArticles(): Observable<any>{
+    return this.HttpClient.get<any>(
+      `${this.API_PATH}/Article/GetTopArticles.php?`
+    );
+}
+
   addArticle(model): Observable<any>{
     return this.HttpClient.post(`${this.API_PATH}/Article/AddArticle.php`,model);
   }
