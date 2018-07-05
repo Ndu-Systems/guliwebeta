@@ -40,7 +40,7 @@ export class ViewArticleComponent implements OnInit {
     }
   }
   ViewArticle(ArticleId) {
-    debugger
+ 
     this.viewArticleService.viewArticle(ArticleId)
       .subscribe(response => {
         if (response) {

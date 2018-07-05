@@ -26,5 +26,4 @@ export class UserAccountService {
    updateUser(data): Observable<any>{
      return  this.httpClient.post(`${this.API_PATH}/Account/updateuser.php`,data);
    }
-
 }

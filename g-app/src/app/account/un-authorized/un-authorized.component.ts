@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingCartService } from '../../shopping-cart/shopping-cart.service';
 
 @Component({
   selector: 'app-un-authorized',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UnAuthorizedComponent implements OnInit {
 
-  constructor() { }
+  constructor(private shoppingCartService: ShoppingCartService) { }
 
   ngOnInit() {
+    this.shoppingCartService.empty(); 
   }
 
 }

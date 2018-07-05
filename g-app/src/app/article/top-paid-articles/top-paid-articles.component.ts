@@ -43,7 +43,7 @@ export class TopPaidArticlesComponent implements OnInit {
 
   
   SelectedArticle(item){
-    debugger
+  
     this.router.navigate(['/view-article',  item.ArticleId ]);
   }
 

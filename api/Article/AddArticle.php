@@ -6,7 +6,7 @@ require "../conn.php";
 $data = json_decode(file_get_contents("php://input"));
 
 if (isset($data->Price) ){  
- $ISSN  				= $data->issn;
+ 	$ISSN  				= $data->issn;
 	$Price              = $data->Price;
 	$Title              = $data->Title;
 	$PublisherID        = $data->PublisherID;
