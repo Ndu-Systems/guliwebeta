@@ -16,6 +16,7 @@ import { EmailService } from './shared/email.service';
 import { LocalStorageService, StorageService } from './shared/storage.service';
 import { UserPipePipe } from './shared/pipes/user-pipe.pipe';
 import { ArticlePipePipe } from './shared/pipes/article-pipe.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
  
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ArticlePipePipe } from './shared/pipes/article-pipe.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,    
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [
     SelectService,

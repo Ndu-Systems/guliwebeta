@@ -2,7 +2,7 @@
 <div class="album py-5 bg-light">
     <div class="container" *ngIf="articles$ | async as listOfArticles">
       <div class="row">
-        <div class="col-md-4"  *ngFor="let item of listOfArticles" >
+        <div class="col-md-4"  *ngFor="let item of listOfArticles | paginate: { itemsPerPage: 3, currentPage: p }" >
           <div class="card mb-4 box-shadow">
               <div class="card-header" >
                   Featured - Articles
@@ -20,6 +20,7 @@
           </div>
         </div> 
       </div>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls> 
     </div>
     <div class="container"  *ngIf="(!articles$)">
       <h1>No Articles Available Yet Coming Soon...</h1>

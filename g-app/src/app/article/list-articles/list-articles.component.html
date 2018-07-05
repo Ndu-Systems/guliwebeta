@@ -23,7 +23,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of articles | articlepipe:search">
+      <tr *ngFor="let item of articles | paginate: { itemsPerPage: 5, currentPage: p } | articlepipe:search">
         <td>{{item.ISSN}}</td>
         <td>{{item.Title}}</td>
         <td>{{item.Abstract}}</td>
@@ -37,4 +37,5 @@
       </tr>
     </tbody>
   </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls> 
 </div>

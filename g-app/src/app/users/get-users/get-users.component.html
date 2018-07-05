@@ -22,12 +22,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let user of users | userpipe:search">
+          <tr *ngFor="let user of users | paginate: { itemsPerPage: 5, currentPage: p } | userpipe:search">
             <td>{{user.FirstName}}</td>
             <td>{{user.Surname}}</td>
             <td>{{user.Email}}</td>
             <td>1</td>
           </tr>
-        </tbody>
+        </tbody>    
       </table>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
