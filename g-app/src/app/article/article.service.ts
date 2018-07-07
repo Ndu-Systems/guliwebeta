@@ -46,4 +46,8 @@ export class ArticleService {
   addArticlePurchase(data): Observable<any>{
     return this.HttpClient.post<any>(`${this.API_PATH}/Purchase/AddArticlePurchase.php`, data)
   }
+
+  disableArticle(data) : Observable<any>{
+    return this.HttpClient.put<any>(`${this.API_PATH}/Article/EditArticle.php`, data)
+  }
 }
