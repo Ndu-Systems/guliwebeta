@@ -95,17 +95,7 @@ export class PayFastComponent implements OnInit {
         }
       })
   }
-  total: number
-  private TotalOrderAmount(cartItems: ICartItemWithProduct[]): number {
-
-    for (let i = 0; i < this.cartItems.length; i++) {
-      let cart = this.cartItems[i].article;
-      if (cart.Price !== undefined) {
-        this.amount = cart.Price;
-      }
-    }
-    return this.total;
-  }
+   
 
   Save() {
     debugger
@@ -115,8 +105,17 @@ export class PayFastComponent implements OnInit {
         UserId: this.user.UserId
       }
       this.articleService.addArticlePurchase(data).subscribe(response => {
-        if (response === 1) {
+        if (response === "1") {
           console.log("Purchase Successful!")
+          let data = {
+            ArticleId: item.ArticleId
+          }
+          this.articleService.updateDownload(data).subscribe(response =>{
+            if(response === "1")
+              console.log("download updated");
+              this.cart = null;
+              this.cartSubscription = null;
+          });
         }
         else {
           console.log(response);

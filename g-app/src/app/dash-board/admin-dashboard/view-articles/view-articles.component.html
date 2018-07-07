@@ -1,2 +1,82 @@
 <app-admin-nav></app-admin-nav>
+<div class="container pt-5">
+    <div class="card-deck">
+        <div class="card " style="width: 18rem;">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <i class="fa fa-check fa-3x" style="color: indigo">
+                        </i>
+                    </div>
+                    <div class="col-md-9">
+                        <h5 class="card-title pull-right">Pending Purchases</h5>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush pt-2">
+                    <div class="row">
+                        <li class="list-group-item   col-md-3">
+                            <a routerLink="/pending-downloads" class="btn btn-primary pt-2" style="color: white">Go</a>
+                        </li>
+                        <li class="list-group-item col-md-9">
+                            <h2 class="pull-right">
+                               {{pending}}
+                            </h2>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <i class="fa fa-download fa-3x" style="color: indigo">
+                        </i>
+                    </div>
+                    <div class="col-md-9 pull right">
+                        <h5 class="card-title pull-right">Active Downloads</h5>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush pt-2">
+                    <div class="row">
+                        <li class="list-group-item   col-md-3">
+                            <a routerLink="/view-articles" class="btn btn-secondary pt-2" style="color: white">Go</a>
+                        </li>
+                        <li class="list-group-item col-md-9">
+                            <h2 class="pull-right">
+                                0
+                            </h2>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <i class="fa fa-inbox fa-3x" style="color: indigo">
+                        </i>
+                    </div>
+                    <div class="col-md-9 pull right">
+                        <h5 class="card-title pull-right">Archived Downloads</h5>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush pt-2">
+                    <div class="row">
+                        <li class="list-group-item   col-md-3">
+                            <a routerLink="/view-articles" class="btn btn-secondary pt-2" style="color: white">Go</a>
+                        </li>
+                        <li class="list-group-item col-md-9">
+                            <h2 class="pull-right">
+                                0
+                            </h2>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
 <app-list-articles></app-list-articles>

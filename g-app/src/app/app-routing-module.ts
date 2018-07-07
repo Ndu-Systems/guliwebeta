@@ -1,3 +1,5 @@
+import { PendingDownloadsComponent } from './dash-board/admin-dashboard/pending-downloads/pending-downloads.component';
+import { ListPendingDownloadsComponent } from './purchases/list-pending-downloads/list-pending-downloads.component';
 import { AddArticleComponent } from './article/add-article/add-article.component';
 import { GetUsersComponent } from './users/get-users/get-users.component';
 import { ForgotPasswordEmailComponent } from './account/forgot-password/forgot-password-email/forgot-password-email.component';
@@ -31,7 +33,9 @@ import { ViewUsersComponent } from './dash-board/admin-dashboard/view-users/view
 import { ListArticlesComponent } from './article/list-articles/list-articles.component';
 import { ViewArticlesComponent } from './dash-board/admin-dashboard/view-articles/view-articles.component';
 import { TopSellingArticlesComponent } from './article/top-selling-articles/top-selling-articles.component';
- 
+import { ListPurchasesComponent } from './purchases/list-purchases/list-purchases.component';
+import { MyPurchasesComponent } from './dash-board/user-dashboard/my-purchases/my-purchases.component';
+
 //Create routes here with components
 const routes: Routes = [
     { path: "", component: HomeComponent },
@@ -51,9 +55,11 @@ const routes: Routes = [
     { path: "my-profile", component: MyProfileComponent },
     { path: "forgot-password", component: ForgotPasswordEmailComponent },
     { path: "reset-password", component: ForgotPasswordComponent },
-    { path: "checkout", component: CheckoutComponent }, 
-    { path: "view-subscribers", component: ViewUsersComponent},
-    { path: "view-articles", component: ViewArticlesComponent},
+    { path: "checkout", component: CheckoutComponent },
+    { path: "view-subscribers", component: ViewUsersComponent },
+    { path: "view-articles", component: ViewArticlesComponent },
+    { path: "pending-downloads", component: PendingDownloadsComponent },
+    { path: "my-purchases", component: MyPurchasesComponent },
     { path: "**", component: HomeComponent }
 ];
 
@@ -89,7 +95,11 @@ export const routingComponents = [
     GetUsersComponent,
     ListArticlesComponent,
     ViewArticlesComponent,
-    TopSellingArticlesComponent
+    TopSellingArticlesComponent,
+    ListPendingDownloadsComponent,
+    PendingDownloadsComponent,
+    ListPurchasesComponent,
+    MyPurchasesComponent
 ];
 
 //Compile into on Ngmodule
